@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LoginForm1.CustomControls"
+             x:Class="LoginForm1.Views.LoginView">
+    <ContentPage.Content>
+        <!--Main Grid-->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="30*"/>
+            </Grid.RowDefinitions>
+            <!--Header Section-->
+            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Login" TextColor="Black" FontSize="30" Padding="12,90,12,0" TranslationY="15"/>
+                <Label Grid.Row="1" Text="Please login to your account." TextColor="Gray" FontSize="20" Padding="12,20,12,0"/>
+
+
+            </Grid>
+            <!--Body Section-->
+            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--Entry Section-->
+
+                <Grid Grid.Row="0"  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                      RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--Email Section-->
+                    <Frame Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               Padding="12,0,12,0" HeightRequest="50"  BackgroundColor="Transparent" HasShadow="False">
+                        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                            <Label Text="Email" HorizontalOptions="Fill" VerticalOptions="Fill" TranslationY="-10"/>
+                            <Entry Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                      PlaceholderColor="LightGray" TextColor="Black" />
+
+                        </Grid>
+                    <!--Password Section-->
+                    </Frame>
+                    <Frame Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               Padding="12,0,12,0" HeightRequest="50"  BackgroundColor="Transparent" HasShadow="False">
+                        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Password" HorizontalOptions="Fill" VerticalOptions="Fill" TranslationY="-10"/>
+                            <Entry Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                      PlaceholderColor="LightGray" TextColor="Black" />
+                            <Label Text="Forgot Password?" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" TextColor="Green"/>
+
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="12,12,12,12" RowSpacing="22">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--Login Button-->
+                    <Button Grid.Row="0" Text="Login" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="White" 
+                            BackgroundColor="Green" CornerRadius="8"/>
+                    <Grid Grid.Row="1" ColumnDefinitions="*,50,*" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">                        <BoxView Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="1" BackgroundColor="Gray"/>                        <Label Text="Or" Grid.Column="1" FontSize="18" TextColor="Gray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>                        <BoxView Grid.Column="2"  HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="1" BackgroundColor="Gray"/>                    </Grid>
+                </Grid>
+            </Grid>
+            <!--footer-->
+            <!--Facebook and Twitter Icon-->
+            <Grid Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowSpacing="30" TranslationY="-40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="55"/>
+                        <ColumnDefinition Width="55"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               Padding="12,0,12,0" HeightRequest="55" CornerRadius="28" BackgroundColor="White">
+                        <Image HorizontalOptions="Center" VerticalOptions="FillAndExpand" Source="FacebookIcon.png"/>
+                    </Frame>
+                    <Frame Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               Padding="12,0,12,0" HeightRequest="55" CornerRadius="28" BackgroundColor="White">
+                        <Image HorizontalOptions="Center" VerticalOptions="FillAndExpand" Source="TwitterIcon.png"/>
+                    </Frame>
+                </Grid>
+                <!--Text-->
+                <Label Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Dont have an account?"/>
+                            <Span Text=" Signup"
+                                  TextColor="Green"
+                                  FontAttributes="Bold"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

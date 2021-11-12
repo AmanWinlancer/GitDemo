@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LoginForm1.CustomControls"
+             x:Class="LoginForm1.MainPage">
+
+    <ContentPage.Content>
+        <!--Main Grid-->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <!--BackGround Image-->
+            <Image Source="BackGround.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+            <!--Main Form-->
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="30,20,30,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <!--Header-->
+                <Grid Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" RowDefinitions="Auto,Auto" RowSpacing="25">
+                    <!--App logo-->
+                    <Image Source="AppLogo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="1" Text="Welcome to Equip UI Mart &#10;For more Sign up Now!!" HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"
+                           FontAttributes="Bold" FontSize="20"/>
+                </Grid>
+                <!--Body of Login Page-->
+                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--Entry Section-->
+                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="18" 
+                          RowDefinitions="Auto,Auto">
+                        <!--Email Address-->
+                        <Frame Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20" 
+                               BackgroundColor="White" HeightRequest="40" Padding="12,10,12,10" >
+                            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <local:CustomEntry Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                                       Placeholder="Email Address" PlaceholderColor="LightGray" TextColor="Black" FontSize="18" TranslationX="15"/>
+                                <Image Grid.Column="1" Source="MailIcon.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TranslationX="-15"/>
+                            </Grid>
+                        </Frame>
+                        <!--Password Field-->
+                        <Frame Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="20"
+                               BackgroundColor="White" Padding="12,10,12,10">
+                            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <local:CustomEntry Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                       Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" TextColor="Black" FontSize="18" TranslationX="15"/>
+                                <Image Grid.Column="1" Source="LockIcon.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TranslationX="-18"/>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                    <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10">
+                        <!--Login Button-->
+                        <Button Grid.Row="0" CornerRadius="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Login" 
+                                FontSize="18" TextColor="White" BackgroundColor="Orange" Padding="15"/>
+                        <Label Grid.Row="1" Text="Forgot Password?" TextColor="Orange" HorizontalOptions="EndAndExpand" FontSize="17" TranslationX="3"/>
+                    </Grid> 
+                </Grid>
+                <!--Footer-->
+                <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="55"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="or login with" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    <Grid Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="55"/>
+                            <ColumnDefinition Width="55"/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="30"
+                               HeightRequest="55" BackgroundColor="White">
+                            <Image Source="GoogleIcon.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+                        <Frame Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="30"
+                               HeightRequest="55" BackgroundColor="White">
+                            <Image Source="FacebookIcon.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+                        <Frame Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="30"
+                               HeightRequest="55" BackgroundColor="White">
+                            <Image Source="TwitterIcon.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+                    </Grid>
+                    <Label Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Dont have an account?" TextColor="White"/>
+                                <Span Text=" Register now"
+                                      TextColor="Orange"
+                                      TextDecorations="Underline"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="By signing up,you are agree with our" TextColor="White" FontSize="12"/>
+                                <Span Text=" Terms &amp; Condition" FontSize="12"
+                                      TextColor="Orange"
+                                      TextDecorations="Underline"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
